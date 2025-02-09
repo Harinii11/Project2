@@ -31,10 +31,8 @@ function setSlide(index) {
     showSlide(index);
 }
 
-// Auto-slide every 3 seconds
 let slideInterval = setInterval(nextSlide, 3000);
 
-// Stop auto-slide on interaction
 document.querySelector('.slider-container').addEventListener('mouseover', () => {
     clearInterval(slideInterval);
 });
@@ -42,7 +40,6 @@ document.querySelector('.slider-container').addEventListener('mouseleave', () =>
     slideInterval = setInterval(nextSlide, 3000);
 });
 
-// Touch/Swipe functionality
 document.querySelector('.slider-container').addEventListener('touchstart', (e) => {
     touchStartX = e.changedTouches[0].screenX;
 });
@@ -57,5 +54,4 @@ function handleSwipe() {
     if (touchEndX - touchStartX > 50) prevSlide();
 }
 
-// Initial display
 showSlide(currentIndex);
