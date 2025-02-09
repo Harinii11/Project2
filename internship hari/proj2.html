@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Image Slider</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide fade">
+                    <img src="image1.jpeg" alt="Image 1">
+                    <p class="caption">Waterfalls</p>
+                </div>
+                <div class="slide fade">
+                    <img src="image2.jpeg" alt="Image 2">
+                    <p class="caption">Peacock</p>
+                </div>
+                <div class="slide fade">
+                    <img src="image3.jpeg" alt="Image 3">
+                    <p class="caption">Sunset</p>
+                </div>
+                <div class="slide fade">
+                    <img src="image4.jpeg" alt="Image 4">
+                    <p class="caption">Saturn planet</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+
+        <!-- Thumbnail Navigation -->
+        <div class="thumbnails">
+            <img src="image1.jpeg" class="thumb" onclick="setSlide(0)">
+            <img src="image2.jpeg" class="thumb" onclick="setSlide(1)">
+            <img src="image3.jpeg" class="thumb" onclick="setSlide(2)">
+            <img src="image4.jpeg" class="thumb" onclick="setSlide(3)">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
